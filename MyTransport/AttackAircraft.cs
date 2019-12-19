@@ -18,16 +18,13 @@ namespace MyTransport
             bool propeller, bool flag) :
             base(maxSpeed, weight, mainColor)
         {
-
             DopColor = dopColor;
             Turbines = turbines;
             Propeller = propeller;
-            Flag = flag;
-
+            Flag = flag;        
         }
         public override void DrawAircraft(Graphics g)
         {
-
             base.DrawAircraft(g);
             if (Propeller)
             {
@@ -45,15 +42,12 @@ namespace MyTransport
                 g.FillRectangle(br2, _startPosX + 5, _startPosY + 40, 20, 5);
             }
 
-
-
             if (Flag)
             {
                 Brush b = new SolidBrush(Color.Red);
                 g.FillRectangle(b, _startPosX + 65, _startPosY + 10, 5, 5);
                 g.FillRectangle(b, _startPosX + 65, _startPosY + 45, 5, 5);
             }
-
         }
     }
 }

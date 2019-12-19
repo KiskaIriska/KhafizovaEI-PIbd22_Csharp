@@ -13,7 +13,7 @@ namespace MyTransport
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormAttackAircraft());
+            Application.Run(new FormParking());
         }
     }
 }

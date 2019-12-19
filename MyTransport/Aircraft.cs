@@ -54,14 +54,12 @@ namespace MyTransport
             }
         }
 
-
         public override void DrawAircraft(Graphics g)
         {
             Brush br = new SolidBrush(MainColor);
             g.FillRectangle(br, _startPosX + 5, _startPosY + 25, 85, 10);
             g.FillEllipse(br, _startPosX, _startPosY + 25, 10, 10);
             g.FillEllipse(br, _startPosX + 85, _startPosY + 25, 10, 10);
-
 
             g.FillRectangle(br, _startPosX + 10, _startPosY + 15, 10, 30);
             g.FillEllipse(br, _startPosX + 10, _startPosY + 10, 10, 10);
@@ -77,8 +75,6 @@ namespace MyTransport
 
             Brush br1 = new SolidBrush(Color.DarkCyan);
             g.FillEllipse(br1, _startPosX + 60, _startPosY + 25, 20, 10);
-
-
         }
     }
 }
