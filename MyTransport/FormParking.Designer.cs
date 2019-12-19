@@ -36,6 +36,8 @@
             this.buttonGet = new System.Windows.Forms.Button();
             this.label = new System.Windows.Forms.Label();
             this.maskedTextBox = new System.Windows.Forms.MaskedTextBox();
+            this.listBoxLevels = new System.Windows.Forms.ListBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).BeginInit();
             this.groupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGet)).BeginInit();
@@ -51,9 +53,9 @@
             // 
             // buttonSet_Aircraft
             // 
-            this.buttonSet_Aircraft.Location = new System.Drawing.Point(702, 12);
+            this.buttonSet_Aircraft.Location = new System.Drawing.Point(691, 154);
             this.buttonSet_Aircraft.Name = "buttonSet_Aircraft";
-            this.buttonSet_Aircraft.Size = new System.Drawing.Size(85, 66);
+            this.buttonSet_Aircraft.Size = new System.Drawing.Size(123, 22);
             this.buttonSet_Aircraft.TabIndex = 1;
             this.buttonSet_Aircraft.Text = "Посадить самолет";
             this.buttonSet_Aircraft.UseVisualStyleBackColor = true;
@@ -61,9 +63,9 @@
             // 
             // buttonSet_AttackAircraft
             // 
-            this.buttonSet_AttackAircraft.Location = new System.Drawing.Point(702, 84);
+            this.buttonSet_AttackAircraft.Location = new System.Drawing.Point(691, 182);
             this.buttonSet_AttackAircraft.Name = "buttonSet_AttackAircraft";
-            this.buttonSet_AttackAircraft.Size = new System.Drawing.Size(85, 67);
+            this.buttonSet_AttackAircraft.Size = new System.Drawing.Size(123, 24);
             this.buttonSet_AttackAircraft.TabIndex = 2;
             this.buttonSet_AttackAircraft.Text = "Посадить штурмовик";
             this.buttonSet_AttackAircraft.UseVisualStyleBackColor = true;
@@ -75,9 +77,9 @@
             this.groupBox.Controls.Add(this.buttonGet);
             this.groupBox.Controls.Add(this.label);
             this.groupBox.Controls.Add(this.maskedTextBox);
-            this.groupBox.Location = new System.Drawing.Point(631, 169);
+            this.groupBox.Location = new System.Drawing.Point(651, 224);
             this.groupBox.Name = "groupBox";
-            this.groupBox.Size = new System.Drawing.Size(224, 257);
+            this.groupBox.Size = new System.Drawing.Size(224, 214);
             this.groupBox.TabIndex = 3;
             this.groupBox.TabStop = false;
             this.groupBox.Text = "Забрать самолет";
@@ -116,11 +118,31 @@
             this.maskedTextBox.Size = new System.Drawing.Size(100, 20);
             this.maskedTextBox.TabIndex = 0;
             // 
+            // listBoxLevels
+            // 
+            this.listBoxLevels.FormattingEnabled = true;
+            this.listBoxLevels.Location = new System.Drawing.Point(691, 40);
+            this.listBoxLevels.Name = "listBoxLevels";
+            this.listBoxLevels.Size = new System.Drawing.Size(120, 108);
+            this.listBoxLevels.TabIndex = 4;
+            this.listBoxLevels.SelectedIndexChanged += new System.EventHandler(this.listBoxLevels_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(688, 12);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(41, 13);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Levels:";
+            // 
             // FormParking
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(887, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.pictureBoxParking);
             this.Controls.Add(this.groupBox);
             this.Controls.Add(this.buttonSet_AttackAircraft);
@@ -132,6 +154,7 @@
             this.groupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGet)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -145,5 +168,7 @@
         private System.Windows.Forms.Button buttonGet;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.MaskedTextBox maskedTextBox;
+        private System.Windows.Forms.ListBox listBoxLevels;
+        private System.Windows.Forms.Label label1;
     }
 }
