@@ -48,7 +48,6 @@ namespace MyTransport
                 g.FillRectangle(b, _startPosX + 65, _startPosY + 10, 5, 5);
                 g.FillRectangle(b, _startPosX + 65, _startPosY + 45, 5, 5);
             }
-
         }
     }
 }
