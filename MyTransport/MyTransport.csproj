@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Aircraft.cs" />
     <Compile Include="AttackAircraft.cs" />
+    <Compile Include="MultiLevelParking.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FlyingObject.cs" />
     <Compile Include="FormAttackAircraft.cs">
