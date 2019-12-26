@@ -49,5 +49,9 @@ namespace MyTransport
                 g.FillRectangle(b, _startPosX + 65, _startPosY + 45, 5, 5);
             }
         }
+        public void SetDopColor(Color color)
+        {
+            DopColor = color;
+        }
     }
 }

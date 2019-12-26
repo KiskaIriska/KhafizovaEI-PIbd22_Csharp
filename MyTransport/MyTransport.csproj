@@ -48,6 +48,12 @@
   <ItemGroup>
     <Compile Include="Aircraft.cs" />
     <Compile Include="AttackAircraft.cs" />
+    <Compile Include="FormAircraftConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAircraftConfig.Designer.cs">
+      <DependentUpon>FormAircraftConfig.cs</DependentUpon>
+    </Compile>
     <Compile Include="MultiLevelParking.cs" />
     <Compile Include="Direction.cs" />
     <Compile Include="FlyingObject.cs" />
@@ -67,6 +73,9 @@
     <Compile Include="Parking.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormAircraftConfig.resx">
+      <DependentUpon>FormAircraftConfig.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormAttackAircraft.resx">
       <DependentUpon>FormAttackAircraft.cs</DependentUpon>
     </EmbeddedResource>

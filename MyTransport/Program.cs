@@ -6,6 +6,7 @@ using System.Windows.Forms;
 
 namespace MyTransport
 {
+    public delegate void carDelegate(ITransport car);
     static class Program
     {
         [STAThread]
