@@ -6,7 +6,7 @@ using System.Windows.Forms;
 
 namespace MyTransport
 {
-    public delegate void carDelegate(ITransport car);
+    public delegate void carDelegate(ITransport aircraft);
     static class Program
     {
         [STAThread]
