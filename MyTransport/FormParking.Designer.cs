@@ -29,8 +29,7 @@
         private void InitializeComponent()
         {
             this.pictureBoxParking = new System.Windows.Forms.PictureBox();
-            this.buttonSet_Aircraft = new System.Windows.Forms.Button();
-            this.buttonSet_AttackAircraft = new System.Windows.Forms.Button();
+            this.buttonAdd = new System.Windows.Forms.Button();
             this.groupBox = new System.Windows.Forms.GroupBox();
             this.pictureBoxGet = new System.Windows.Forms.PictureBox();
             this.buttonGet = new System.Windows.Forms.Button();
@@ -51,25 +50,15 @@
             this.pictureBoxParking.TabIndex = 0;
             this.pictureBoxParking.TabStop = false;
             // 
-            // buttonSet_Aircraft
+            // buttonAdd
             // 
-            this.buttonSet_Aircraft.Location = new System.Drawing.Point(691, 154);
-            this.buttonSet_Aircraft.Name = "buttonSet_Aircraft";
-            this.buttonSet_Aircraft.Size = new System.Drawing.Size(123, 22);
-            this.buttonSet_Aircraft.TabIndex = 1;
-            this.buttonSet_Aircraft.Text = "Посадить самолет";
-            this.buttonSet_Aircraft.UseVisualStyleBackColor = true;
-            this.buttonSet_Aircraft.Click += new System.EventHandler(this.buttonSet_Aircraft_Click);
-            // 
-            // buttonSet_AttackAircraft
-            // 
-            this.buttonSet_AttackAircraft.Location = new System.Drawing.Point(691, 182);
-            this.buttonSet_AttackAircraft.Name = "buttonSet_AttackAircraft";
-            this.buttonSet_AttackAircraft.Size = new System.Drawing.Size(123, 24);
-            this.buttonSet_AttackAircraft.TabIndex = 2;
-            this.buttonSet_AttackAircraft.Text = "Посадить штурмовик";
-            this.buttonSet_AttackAircraft.UseVisualStyleBackColor = true;
-            this.buttonSet_AttackAircraft.Click += new System.EventHandler(this.buttonSet_AttackAircraft_Click);
+            this.buttonAdd.Location = new System.Drawing.Point(691, 154);
+            this.buttonAdd.Name = "buttonAdd";
+            this.buttonAdd.Size = new System.Drawing.Size(131, 64);
+            this.buttonAdd.TabIndex = 1;
+            this.buttonAdd.Text = "Добавить";
+            this.buttonAdd.UseVisualStyleBackColor = true;
+            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
             // 
             // groupBox
             // 
@@ -145,8 +134,7 @@
             this.Controls.Add(this.listBoxLevels);
             this.Controls.Add(this.pictureBoxParking);
             this.Controls.Add(this.groupBox);
-            this.Controls.Add(this.buttonSet_AttackAircraft);
-            this.Controls.Add(this.buttonSet_Aircraft);
+            this.Controls.Add(this.buttonAdd);
             this.Name = "FormParking";
             this.Text = "FormParking";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxParking)).EndInit();
@@ -161,8 +149,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBoxParking;
-        private System.Windows.Forms.Button buttonSet_Aircraft;
-        private System.Windows.Forms.Button buttonSet_AttackAircraft;
+        private System.Windows.Forms.Button buttonAdd;
         private System.Windows.Forms.GroupBox groupBox;
         private System.Windows.Forms.PictureBox pictureBoxGet;
         private System.Windows.Forms.Button buttonGet;
