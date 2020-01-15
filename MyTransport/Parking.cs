@@ -12,12 +12,12 @@ namespace MyTransport
         private Dictionary<int, T> _places;
         private int _maxCount;
 
-        private int PictureWidth { get; set; }       
+        private int PictureWidth { get; set; }
         private int PictureHeight { get; set; }
 
         private const int _placeSizeWidth = 210;
-      
-        private const int _placeSizeHeight = 80;    
+
+        private const int _placeSizeHeight = 80;
         public Parking(int sizes, int pictureWidth, int pictureHeight)
         {
             _maxCount = sizes;
@@ -54,12 +54,12 @@ namespace MyTransport
             }
             return null;
         }
-  
+
         private bool CheckFreePlace(int index)
         {
             return !_places.ContainsKey(index);
         }
-   
+
         public void Draw(Graphics g)
         {
             DrawMarking(g);
@@ -68,7 +68,7 @@ namespace MyTransport
             {
                 _places[keys[i]].DrawAircraft(g);
             }
-        }     
+        }
         private void DrawMarking(Graphics g)
         {
             Pen pen = new Pen(Color.Black, 3);  //границы праковки             
@@ -82,6 +82,26 @@ namespace MyTransport
                     g.DrawLine(pen, i * _placeSizeWidth, j * _placeSizeHeight, i * _placeSizeWidth + 110, j * _placeSizeHeight);
                 }
                 g.DrawLine(pen, i * _placeSizeWidth, 0, i * _placeSizeWidth, 400);
+            }
+        }
+        public T this[int ind]
+        {
+            get
+            {
+                if (_places.ContainsKey(ind))
+                {
+                    return _places[ind];
+                }
+                return null;
+            }
+            set
+            {
+                if (CheckFreePlace(ind))
+                {
+                    _places.Add(ind, value);
+                    _places[ind].SetPosition(5 + ind / 5 * _placeSizeWidth + 5, ind % 5 * _placeSizeHeight + 15, PictureWidth, PictureHeight);
+
+                }
             }
         }
     }
