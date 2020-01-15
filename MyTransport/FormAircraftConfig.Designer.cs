@@ -77,7 +77,7 @@
             this.panelPink.Name = "panelPink";
             this.panelPink.Size = new System.Drawing.Size(65, 59);
             this.panelPink.TabIndex = 7;
-            this.panelPink.MouseDown += new System.Windows.Forms.MouseEventHandler(this.labelAircraft_MouseDown);
+            this.panelPink.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panelColor_MouseDown);
             // 
             // panelGray
             // 
@@ -179,6 +179,7 @@
             this.buttonOk.TabIndex = 3;
             this.buttonOk.Text = "Добавить";
             this.buttonOk.UseVisualStyleBackColor = true;
+            this.buttonOk.Click += new System.EventHandler(this.ButtonOk_Click);
             // 
             // labelAttackAicraft
             // 
@@ -204,6 +205,8 @@
             // 
             // panel1
             // 
+            this.panel1.AllowDrop = true;
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.labelDopColor);
             this.panel1.Controls.Add(this.labelBaseColor);
             this.panel1.Controls.Add(this.pictureBoxAircraft);
