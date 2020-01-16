@@ -14,10 +14,9 @@ namespace MyTransport
         private const int countPlaces = 20;
         private int pictureWidth;
         private int pictureHeight;
-        Logger logger;
+    
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
-            logger = LogManager.GetCurrentClassLogger();
             parkingStages = new List<Parking<ITransport>>();
             this.pictureWidth = pictureWidth;
             this.pictureHeight = pictureHeight;
