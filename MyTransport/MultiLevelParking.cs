@@ -14,7 +14,7 @@ namespace MyTransport
         private const int countPlaces = 20;
         private int pictureWidth;
         private int pictureHeight;
-    
+      
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
             parkingStages = new List<Parking<ITransport>>();
@@ -67,6 +67,7 @@ namespace MyTransport
             writer.Close();
             return true;
         }
+
         public bool LoadData(string filename)
         {
             if (!File.Exists(filename))
@@ -120,6 +121,10 @@ namespace MyTransport
                 }
             }
             return true;
+        }
+        public void Sort()
+        {
+            parkingStages.Sort();
         }
     }
 }
