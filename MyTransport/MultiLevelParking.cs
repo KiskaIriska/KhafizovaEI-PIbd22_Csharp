@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NLog;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace MyTransport
         private const int countPlaces = 20;
         private int pictureWidth;
         private int pictureHeight;
+    
         public MultiLevelParking(int countStages, int pictureWidth, int pictureHeight)
         {
             parkingStages = new List<Parking<ITransport>>();
@@ -40,7 +42,7 @@ namespace MyTransport
             {
                 File.Delete(filename);
             }
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(filename);              
+            StreamWriter writer = new System.IO.StreamWriter(filename);
             writer.WriteLine("CountLeveles:" + parkingStages.Count);
             foreach (var level in parkingStages)
             {                   
@@ -65,7 +67,6 @@ namespace MyTransport
             writer.Close();
             return true;
         }
-   
         public bool LoadData(string filename)
         {
             if (!File.Exists(filename))
@@ -88,7 +89,7 @@ namespace MyTransport
                 }
                 else
                 {
-                    return false;
+                    throw new Exception("Неверный формат файла");
                 }
                 while (true)
                 {
@@ -98,7 +99,8 @@ namespace MyTransport
                     if (tempe == "Level")
                     {     
                         counter++;
-                        parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth, pictureHeight)); continue;
+                        parkingStages.Add(new Parking<ITransport>(countPlaces, pictureWidth, pictureHeight));
+                        continue;
                     }
                     if (string.IsNullOrEmpty(tempe))
                     {
